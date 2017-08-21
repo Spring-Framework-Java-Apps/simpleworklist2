@@ -1,0 +1,54 @@
+SimpleWorklist
+
+    Your Todo-List for Getting Things Done
+
+    Software-Stack: {{{http://docs.oracle.com/javaee/6/tutorial/doc/}Java EE}}, {{{http://www.springsource.org/spring-data/jpa}JPA}}, {{{http://www.springsource.org/spring-framework}Spring Frameworks}}, {{{http://static.springsource.org/spring/docs/3.2.x/spring-framework-reference/html/mvc.html}Spring MVC}}, {{{http://getbootstrap.com/2.3.5/}Twitter Bootstrap}}, {{{http://jquery.com/}jQuery}}, HTML5
+
+    Repository: {{https://github.com/phasenraum2010/simpleworklist}}
+
+    Demo: {{http://jbosswildfly-simpleworklist.rhcloud.com/}}
+
+* Use Cases
+
+** User
+
+[img/Use_Cases_User.jpg] Figure Use Cases User
+
+** Tasks and Projects
+
+[img/Use_Cases_Data.jpg] Figure Use Cases Tasks and Projects
+
+** Use Case: Registration
+
+[img/Registration_Request.jpg] Figure Registration Request
+
+[img/Registration_Perform.jpg] Figure Registration Request
+
+** Use Case: Passwort Recovery
+
+[img/Password_Recovery_Request.jpg] Figure Password Recovery Request
+
+[img/Password_Recovery_Perform.jpg] Figure Password Recovery Perform
+
+* Domain Model
+
+** Entities
+
+[img/Domain_Model.jpg] Figure Domain Model
+
+** Domain Model Details
+
+[img/Domain_Model_Details.jpg] Figure Domain Model Details
+
+** Use Case Details
+
+*** Use Case Details: Registration
+
+[img/Registration_Request_Details.jpg] Figure Registration Request Details
+
+[img/Registration_Perform_Details.jpg] Figure Registration Perform Details
+
+** Database Schema
+
+[img/db-schema.png] Database Schema
+
