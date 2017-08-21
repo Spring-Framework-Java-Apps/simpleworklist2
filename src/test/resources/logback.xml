@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.woehlke.gtd.oodm.model" level="DEBUG" />
+    <logger name="org.woehlke.gtd.oodm.model.listener" level="DEBUG" />
+    <logger name="org.woehlke.gtd.oodm.model.parts" level="DEBUG" />
+    <logger name="org.woehlke.gtd.oodm.repositories" level="DEBUG" />
+    <logger name="org.woehlke.gtd.oodm.service" level="DEBUG" />
+    <logger name="org.woehlke.gtd.frontend.model" level="DEBUG" />
+    <logger name="org.woehlke.gtd.frontend.controller" level="DEBUG" />
+    <logger name="org.woehlke.gtd.frontend.controller.common" level="DEBUG" />
+    <logger name="org.woehlke.gtd.backend.service.remote" level="DEBUG" />
+    <logger name="org.woehlke.gtd.backend.service.persist" level="DEBUG" />
+    <logger name="org.woehlke.gtd.backend.service.transform" level="DEBUG" />
+    <logger name="org.woehlke.gtd.backend.mq" level="DEBUG" />
+    <logger name="org.woehlke.gtd" level="DEBUG" />
+    <logger name="org.apache.tomcat" level="INFO" />
+    <logger name="org.springframework.boot" level="WARN" />
+    <logger name="org.springframework.test" level="DEBUG" />
+    <logger name="org.hibernate" level="WARN" />
+    <logger name="org.woehlke.gtd" level="DEBUG" />
+    <root level="INFO"></root>
+</configuration>
