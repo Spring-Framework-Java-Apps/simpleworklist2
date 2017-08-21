@@ -1,0 +1,77 @@
+endpoints:
+  env:
+    - keys-to-sanitize: "password"
+    - keys-to-sanitize: "secret"
+    - keys-to-sanitize: "key"
+    - keys-to-sanitize: "passwort"
+  health:
+    sensitive: false
+  endpoints:
+    shutdown:
+      enabled: false
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQL94Dialect
+info:
+  application:
+    artifactId: @project.artifactId@
+    description: @project.description@
+    groupId: @project.groupId@
+    name: @project.name@
+    version: @project.version@
+management:
+  address: 127.0.0.1
+  context-path: "/manage"
+  security:
+    enabled: false
+spring:
+  application:
+    admin:
+      enabled: false
+    name: @project.name@
+  datasource:
+    driverClassName: org.postgresql.Driver
+    max-total: 20
+    maxActive: 20
+    platform: POSTGRESQL
+    tomcat:
+      max-active: 20
+    url: jdbc:postgresql://localhost:5432/gtd?user=gtd&password=gtdpwd
+    #url: ${DATABASE_URL}
+  devtools:
+    livereload:
+      enabled: false
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+      #ddl-auto: ${GTD_JPA_HIBERNATE_DDL_AUTO}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: false
+  template:
+    cache: false
+  thymeleaf:
+    cache: false
+---
+spring:
+  profiles: testing
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gtdtestuser=gtdtest&password=gtdtestpwd
+    #url: ${GTD_DATABASE_URL_TEST}
+---
+spring:
+  profiles: travis
+  datasource:
+    driverClassName: org.h2.Driver
+    platform: H2
+    url: jdbc:h2:mem:test
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+       dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+hibernate:
+  dialect: org.hibernate.dialect.H2Dialect
